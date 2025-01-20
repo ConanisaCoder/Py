@@ -10,7 +10,12 @@ Sample input:
 '''
 import turtle
 def draw_sqaure():
-    size = int(input("Enter Side Length: "))
+    while True:
+        try:
+            size = float(input("Enter Side Length: "))
+            break
+        except ValueError:
+            print("Must be an int / float: ")
     color = input("Enter color: ")
     turtle.Screen()
     sqaure = turtle.Turtle()
@@ -21,7 +26,12 @@ def draw_sqaure():
         sqaure.right(90)
     sqaure.end_fill()
 def draw_circle():
-    size = int(input("Enter Size: "))
+    while True:
+        try:
+            size = int(input("Enter Size: "))
+            break
+        except ValueError:
+            print("Must be an Int")
     color = input("Enter color: ")
     turtle.Screen()
     circle = turtle.circle(size)
@@ -32,7 +42,12 @@ def draw_circle():
 def draw_triangle():
     equal = input("Enter trianlge sides equal (y/n): ").lower()
     if equal == "y":
-        side_length = int(input("Enter side length: "))
+        while True:
+            try:
+                side_length = int(input("Enter side length: "))
+                break
+            except ValueError:
+                print("Enter int")
         color = input("Enter colour: ").lower()
         turtle.Screen()
         traingle =  turtle.Turtle()
@@ -43,9 +58,24 @@ def draw_triangle():
             traingle.right(120)
         traingle.end_fill()
     elif equal == "n":
-        side_length_1 = int(input("Enter Side Length One: "))
-        side_length_2 = int(input("Enter Side Length Two: "))
-        side_length_3 = int(input("Enter Side Length Three: "))
+        while True:
+            try:
+                side_length_1 = int(input("Enter Side Length One: "))
+                break
+            except ValueError:
+                print("Must be Int")
+        while True:
+            try:
+                side_length_2 = int(input("Enter Side Length Two: "))
+                break
+            except ValueError:
+                print("Must be Int")
+        while True:
+            try:
+                side_length_3 = int(input("Enter Side Length Three: "))
+                break
+            except ValueError:
+                print("Must be Int")
         color = input("Enter color: ").lower()
         turtle.Screen()
         traingle = turtle.Turtle()
