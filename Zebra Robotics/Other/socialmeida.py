@@ -1,0 +1,6 @@
+print("Enter your Favorite Soical Meida Sites")
+s_1=input("Favourite Social Meida site: ")
+s_2=input("Favourite Social Meida site: ")
+s_3=input("Favourite Social Meida site: ")
+print("Your top " + str(3) + " favorite soical media sites are "  + s_1 + " " + s_2 + " " + s_3 + ".")
+print(f"Your top {3} favorite social meida sites are {s_1}, {s_2}, {s_3} ")
