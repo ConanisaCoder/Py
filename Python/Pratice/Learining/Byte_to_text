@@ -1,0 +1,49 @@
+def bytes_to_text():
+    text = ""
+    number_char = int(input("Enter the amount of chars: "))
+    for i in range(0,number_char,1): 
+        binary = input("Enter Binary charcters: ").strip()
+        if len(binary) != 8:
+            print("Vaule not a byte.")
+            exit()
+        num = int(binary,2)
+        text += chr(num)
+    print("Decoded input: " + text)
+def num_to_text():
+    num_count = int(input("Enter total charcters: "))
+    char = ""
+    for i in range(0,num_count,1):
+        num_vaule = int(input("Enter number vaule (Less than 127): "))
+        if num_vaule >= 128:
+            print("Number vaule to great")
+            print("Vaule set to 127"), num_vaule = 127
+        char += chr(num_vaule)
+    print(char)
+def bytes_to_num():
+    binary = input("Enter binary: ")
+    print(int(binary,2))
+def text_to_num():
+    text = input("Enter chars: ")
+    num_vaule = ""
+    for char in text:
+        index = text[char]
+        text += str(chr(int)) +", "
+    print(text)
+running = input("Enter to run program (y): ").lower()
+while running == "y":
+    print("(1) Bytes to Text\n(2) Num to Text\n(3) Bytes to Num\n(4) Text to Num\n(5) Exit")
+    input_input = input("Enter input: ")
+    if input == '1':
+        bytes_to_text()
+    elif input == "2":
+        num_to_text()
+    elif input == "3":
+        bytes_to_num()
+    elif input == "4":
+        text_to_num()
+    elif input == "5":
+        print("Program closed")
+        exit()
+    else:
+        print("Invalid input")
+        exit()
