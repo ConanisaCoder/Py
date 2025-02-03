@@ -4,7 +4,7 @@ question_one = read_file.readline()
 count = 0
 print(question_one,end="")
 answer_one = int(read_file.readline())
-input_one = int(input("Enter number: ")).strip()
+input_one = int(input("Enter number: "))
 if input_one == answer_one:
     print("Correct")
     print("The answer is: " + str(answer_one))
@@ -15,7 +15,7 @@ else:
 question_two = read_file.readline()
 print(question_two,end="")
 answer_two = int(read_file.readline())
-input_two = int(input("Enter number: ")).strip()
+input_two = int(input("Enter number: "))
 if input_two == answer_two:
     count +=1/3
     print("Correct")
@@ -26,7 +26,7 @@ else:
 question_three =read_file.readline()
 print(question_three,end="")
 answer_three = read_file.readline()
-input_three = input("Enter answer: ").strip()
+input_three = input("Enter answer: ")
 if input == answer_three:
     print("Correct")
     print("The answer is: " + str(answer_three))
